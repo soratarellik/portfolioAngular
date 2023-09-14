@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Projet } from 'src/model/model';
 
 @Component({
   selector: 'app-project-card',
@@ -6,10 +7,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./project-card.component.css']
 })
 export class ProjectCardComponent {
+  constructor () {}
   @Input()
-  monInput!: string;
-
+  donnees!: Projet;
   ngOnInit():void{
-    console.log(this.monInput);
   }
 }
